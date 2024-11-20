@@ -36,17 +36,21 @@ function inserirMensagem(mensagem) {
 
 
 
+
 function validarUsuario(objLoginSenha) {
     
     
-    console.log(objLoginSenha)    
-
-    if(objLoginSenha.email === 'admin@admin.com' && objLoginSenha.senha === '1234'){
-        alert('Logado como Admin')
+    if(objLoginSenha.email == 'admin@admin.com' && objLoginSenha.senha == '1234'){
+        
+        window.location.href = "mensagem.html";
+        
     }else{
-        alert('Acesso Negado')
+        
+        alert('Acesso Negado');
     }
+    
 
+    
     var retorno = false;
 
     var validacao = $.ajax({
