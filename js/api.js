@@ -42,7 +42,7 @@ function validarUsuario(objLoginSenha) {
     
     if(objLoginSenha.email == 'admin@admin.com' && objLoginSenha.senha == '1234'){
         
-        window.location.href = "mensagem.html";
+        window.location.href = "mensagens.html";
         
     }else{
         

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         form_contato.addEventListener('submit', (event) => {
             event.preventDefault();
             enviarMensagem();
-            inserirMensagem();
+            inserirMensagem(mensagem);
         });
     } else {
         console.error("Element with ID 'form_contato' not found.");
@@ -52,3 +52,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const messagesContainer = document.getElementById('messagesContainer');
+
+    // pega as mensagens do json
+    const mensagens = obterMensagens();
+
+    if (mensagens.length > 0) {
+        mensagens.forEach(mensagem => {
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('message');
+
+            messageDiv.innerHTML = `
+                <p><strong>Nome:</strong> ${mensagem.nome}</p>
+                <p><strong>E-mail:</strong> ${mensagem.email}</p>
+                <p><strong>Mensagem:</strong> ${mensagem.mensagem}</p>
+                <hr>
+            `;
+
+            
+            messagesContainer.appendChild(messageDiv);
+        });
+    } else {
+        messagesContainer.innerHTML = '<p>Nenhuma mensagem encontrada.</p>';
+    }
+});

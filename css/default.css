@@ -117,7 +117,7 @@ main {
 .bgtitle {
     background: url(../images/header.jpg);
     background-size: cover;
-    padding-top: 355px;
+    padding-top: 250px;
     filter: brightness(0.25) opacity(0.75);
 }
 
@@ -126,7 +126,7 @@ main {
     font: italic 700 2em var(--pagefont);
     color: white;
     position: relative;
-    bottom: 220px;
+    bottom: 150px;
 }
 
 /* principal */
@@ -378,4 +378,49 @@ footer p {
     .footer-section {
         text-align: center;
     }
+}
+/* Mensagens */
+.MsgTabela {
+    margin-left: 35%;
+    margin-top: 75px;
+    
+}
+table tr td {
+    width: 170px
+}
+#messagesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.message {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.message:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.message p strong {
+    color: #1BB4E8;
+}
+.message p:nth-child(2) {
+    font-size: 0.9em;
+    color: #555;
+}
+.message hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+.Tabelas h1{ 
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
 }
